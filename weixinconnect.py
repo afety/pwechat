@@ -24,5 +24,6 @@ def wechat_auth():
         if (hashlib.sha1(s).hexdigest() == signature):
             return make_response(echostr)
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=80, host='0.0.0.0')
